@@ -67,7 +67,13 @@ module.exports = function(grunt) {
           }]
         }
     } ,        
-        
+
+   less : {
+       dist : {
+           src : ['src/less/*'] ,
+           dest : ['src/less/style.css']
+       }
+   } ,
         
     watch: {
       files: ['<%= jshint.files %>'],
@@ -81,7 +87,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks( 'grunt-contrib-uglify' );
   grunt.loadNpmTasks( 'grunt-contrib-cssmin' );
   grunt.loadNpmTasks( 'grunt-contrib-imagemin' );
+  grunt.loadNpmTasks( 'grunt-contrib-less' );
 
-  grunt.registerTask('default', ['concat', 'cssmin' , 'uglify' , 'imagemin']);
+  grunt.registerTask('default', ['concat', 'less' , 'cssmin' , 'uglify' , 'imagemin']);
 
 };
