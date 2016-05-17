@@ -6,4 +6,5 @@ app/dist/css/
 app/dist/js/
 app/dist/images/
 src/js/tmp/
+src/less/tmp/
 

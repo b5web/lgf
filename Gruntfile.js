@@ -50,7 +50,7 @@ module.exports = function(grunt) {
                 "src/css/fonts.css" ,
                 "bower_components/bootstrap/dist/css/bootstrap.css" ,
                 "bower_components/font-awesome/css/font-awesome.css" ,
-                "src/css/style.css"
+                "src/less/tmp/style.css"
                ],
           dest: 'app/dist/css/stylesheets.min.css',
         }]
@@ -70,8 +70,8 @@ module.exports = function(grunt) {
 
    less : {
        dist : {
-           src : ['src/less/*'] ,
-           dest : ['src/less/style.css']
+           src : ['src/less/*.less'] ,
+           dest : 'src/less/tmp/style.css'
        }
    } ,
         
