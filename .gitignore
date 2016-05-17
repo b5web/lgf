@@ -2,3 +2,8 @@ bower_components/
 node_modules/
 nbproject/
 npm-debug.log
+app/dist/css/
+app/dist/js/
+app/dist/images/
+src/js/tmp/
+
