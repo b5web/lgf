@@ -29,7 +29,7 @@ module.exports = function(grunt) {
                       'bower_components/parallax/jquery.parallax.js', 
                       'src/js/function.js'
                       ],
-                dest: 'src/js/tmp/built.js'
+                dest: 'app/src/js/tmp/built.js'
         } 
     }, 
 
@@ -47,10 +47,9 @@ module.exports = function(grunt) {
       target: {
         files: [{
           src: [
-                "src/css/fonts.css" ,
                 "bower_components/bootstrap/dist/css/bootstrap.css" ,
                 "bower_components/font-awesome/css/font-awesome.css" ,
-                "src/less/tmp/style.css"
+                "app/src/less/tmp/style.css"
                ],
           dest: 'app/dist/css/stylesheets.min.css',
         }]
@@ -61,7 +60,7 @@ module.exports = function(grunt) {
         dynamic: {                         // Another target
           files: [{
             expand: true,                  // Enable dynamic expansion
-            cwd: 'src/images/',                   // Src matches are relative to this path
+            cwd: 'app/src/images/',                   // Src matches are relative to this path
             src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
             dest: 'app/dist/images/'                  // Destination path prefix
           }]
@@ -70,8 +69,8 @@ module.exports = function(grunt) {
 
    less : {
        dist : {
-           src : ['src/less/*.less'] ,
-           dest : 'src/less/tmp/style.css'
+           src : ['app/src/less/*.less'] ,
+           dest : 'app/src/less/tmp/style.css'
        }
    } ,
         
