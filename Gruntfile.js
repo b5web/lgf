@@ -73,6 +73,16 @@ module.exports = function(grunt) {
            dest : 'app/src/less/tmp/style.css'
        }
    } ,
+      
+    copy: {
+      main: {
+        expand: true,
+        cwd: 'src',
+        src: 'bower_components/font-awesome/fonts/',
+        dest: 'app/dist/fonts'
+      }
+    },        
+        
         
     watch: {
       files: ['<%= jshint.files %>'],
@@ -87,7 +97,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks( 'grunt-contrib-cssmin' );
   grunt.loadNpmTasks( 'grunt-contrib-imagemin' );
   grunt.loadNpmTasks( 'grunt-contrib-less' );
+  grunt.loadNpmTasks( 'grunt-contrib-copy' );
 
-  grunt.registerTask('default', ['concat', 'less' , 'cssmin' , 'uglify' , 'imagemin']);
+  grunt.registerTask('default', ['concat', 'less' , 'cssmin' , 'copy' , 'uglify' , 'imagemin']);
 
 };
