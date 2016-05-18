@@ -2,9 +2,6 @@ bower_components/
 node_modules/
 nbproject/
 npm-debug.log
-app/dist/css/
-app/dist/js/
-app/dist/images/
+app/dist/
 app/src/js/tmp/
 app/src/less/tmp/
-

@@ -76,10 +76,13 @@ module.exports = function(grunt) {
       
     copy: {
       main: {
-        expand: true,
-        cwd: 'src',
-        src: 'bower_components/font-awesome/fonts/',
-        dest: 'app/dist/fonts'
+        files : [ { 
+			expand: true,
+			src: ['bower_components/font-awesome/fonts/*'],
+			dest: 'app/dist/fonts/',
+			flatten : true ,
+			filter : 'isFile'
+			} ]
       }
     },        
         
