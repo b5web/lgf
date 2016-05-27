@@ -13,14 +13,14 @@ endif;
   $header .= 'Bcc:  ' . 'cedric.casimir@yahoo.fr' . "\r\n";
   $header .= 'X-Mailer: PHP/' . phpversion();
 
-  $message = 'Message: ' . 
-					'Date : ' . date("d/m/Y H:i") . "\n" . 
-					'Nom : ' . $_REQUEST['last_name'] . "\n" . 
-					'Prénom : ' . $_REQUEST['first_name'] . "\n" . 
-					'Email: ' . $_REQUEST['subscribe_email'] . "\n" .
-					'Nom de l\'équipe : ' . $_REQUEST['team_name'] . "\n" . 
-					'Liste des joueurs : ' . '\n' . 
-					$_REQUEST['team_list'];
+  $message =    'Message: ' . 
+                'Date : ' . date("d/m/Y H:i") . "\n" . 
+                'Nom : ' . $_REQUEST['last_name'] . "\n" . 
+                'PrÃ©nom : ' . $_REQUEST['first_name'] . "\n" . 
+                'Email: ' . $_REQUEST['subscribe_email'] . "\n" .
+                'Nom de l\'Ã©quipe : ' . $_REQUEST['team_name'] . "\n" . 
+                'Liste des joueurs : ' . "\n" . 
+                $_REQUEST['team_list'];
 
   // Send contact information
   $mail = mail( $to, $subject , $message, $header );

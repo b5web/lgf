@@ -26,7 +26,7 @@
     <link href="//fonts.googleapis.com/css?family=Roboto:400,300,400italic,700" rel="stylesheet">
     <link href="dist/css/stylesheets.min.css" rel="stylesheet">
     
-	<!--[if lt IE 9]>
+    <!--[if lt IE 9]>
             <script src="dist/js/html5shiv.js"></script>
     <![endif]-->
     
@@ -186,9 +186,14 @@
             <div class="container">
                 <h3 class="section-name"><span>Inscription</span></h3><!-- /.section-name -->
                 <h2 class="section-title">Edition 2016</h2><!-- /.Section-title  -->
-                <p class="section-description">Inscrivez vous pour l'édition 2016 qui aura lieu le 11 Juin 2016 à la salle polyvalente de Plouvorn(29).</p>
+                <p class="section-description">
+                    Inscrivez vous pour l'édition 2016 qui aura lieu le 11 Juin 2016 à la salle polyvalente de Plouvorn(29).<br/>
+                    Le coût de l'inscription est de 20 euros par équipe.<br/>
+                    Un repas est également proposé le soir, le tarif par personne est de 10 euros.<br/>
+                    Attention, une personne au moins dans l'équipe doit être majeure.
+                </p>
                 <!-- /.section-description -->
-                <form class="clearfix" id="subscribe-form" method="post" name="subscribe-form">
+                <form class="clearfix" id="subscribe-form" method="post" name="subscribe-form" style = "margin-top:20px">
                     <div class="subscribe-box-hide">
                         <div class="col-sm-6">
                             <input class="form-control" id="first_name" name="first_name" placeholder="Prénom" type="text"> <span class=
@@ -204,7 +209,7 @@
                         <div class="col-sm-6">
                             <input class="form-control" id="team_name" name="team_name" placeholder="Nom de votre équipe" type="text"> <span class=
                             "subscribe-team-name-error"></span>
-                        </div>
+                        </div>                    
                         <div class="col-sm-10">
                             <textarea class="form-control" id="team_list" name="team_list" placeholder="Liste des joueurs de votre équipe" rows=
                             "10"></textarea> <span class="subscribe-team-list-error"></span>
