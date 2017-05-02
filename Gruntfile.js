@@ -26,8 +26,9 @@ module.exports = function(grunt) {
                       'bower_components/skrollr/dist/skrollr.js',              
                       'bower_components/jquery.easing/dist/jquery.easing.js', 
                       'bower_components/jquery-lwtcountdown/dist/jquery.lwtCountdown-1.0.min.js',  
-                      'bower_components/parallax/jquery.parallax.js', 
-                      'src/js/function.js'
+                      'bower_components/parallax/jquery.parallax.js',
+                      'app/src/conf/conf.js',
+                      'app/src/js/function.js'
                       ],
                 dest: 'app/src/js/tmp/built.js'
         } 
@@ -36,7 +37,7 @@ module.exports = function(grunt) {
     uglify: {
         js : {
             files: {
-              'app/dist/js/javascripts.min.js': ['src/js/tmp/built.js'] ,
+              'app/dist/js/javascripts.min.js': ['app/src/js/tmp/built.js'] ,
               'app/dist/js/html5shiv.js': ['bower_components/html5shiv/dist/html5shiv.js']  
             }
         } 

@@ -1,5 +1,35 @@
 
+/* Configuration
+ -------------------------------------------------------------------*/
+if(configuration.main.subscription.display != true) {
+    $('.btn_subscription').hide();
+    $('#subscribe').hide();
+}
+$('.subscription-description').html(configuration.main.subscription.description);
 
+$(".main-title").html(configuration.main.title);
+$(".main-resume").html(configuration.main.resume);
+
+if(configuration.main.countDown != true) {
+    $("#time_countdown").hide();
+}
+
+$(configuration.editions).each(function( index , edition ) {
+    var class_active = '';
+    if(index == 0) {
+        class_active = ' active';
+    }
+    content =
+        '<div class="item' + class_active + '">' +
+            '<div class="col-sm-9"><img class="img-responsive" src="dist/images/edition/' + edition.image + '">' +
+            '</div>' +
+            '<div class="col-sm-3">' +
+                '<h3>' + edition.name + '</h3>' +
+                '<p>' + edition.description + '</p>' +
+            '</div>' +
+        '</div>';
+    $('.carousel-inner').append(content);
+});
 /* Background Images
 -------------------------------------------------------------------*/
 var  pageTopImage = $('#page-top').data('background-image');
@@ -68,19 +98,15 @@ $(document).ready(function($) {
 	
 	/* Main Menu End  
 	-------------------------------------------------------------------*/
-
-
-
-
 	/* Time Countdown 
 	-------------------------------------------------------------------*/
+    var $dateEdititon=new Date(configuration.main.date);
 	$('#time_countdown').countDown({
-        
          targetDate: {
-             'day': 11,
-             'month': 6,
-             'year': 2016,
-             'hour': 11,
+             'day': $dateEdititon.getDate() ,
+             'month': ($dateEdititon.getMonth()+1),
+             'year': $dateEdititon.getFullYear(),
+             'hour': $dateEdititon.getHours(),
              'min': 0,
              'sec': 0
          },
