@@ -6,6 +6,7 @@ header('Cache-Control: post-check=0, pre-check=0', false);
 if($_REQUEST['first_name'] == '' || $_REQUEST['subscribe_email'] == '' ||  $_REQUEST['team_list'] == ''):
   return "error";
 endif;
+
   $subject = 'Inscription au tournoi de la Grande Flaque - Edition ' . date('Y'); // Subject of your email
 
   // Receiver email address
@@ -23,14 +24,14 @@ endif;
                 'Liste des joueurs : ' . "\n" . 
                 $_REQUEST['team_list'];
 
+$fp = fopen('subscription/request-mail-' . date("Y-m-d_H:i:s") . '.txt', 'a+');
+fwrite($fp, $message);
+fclose($fp);
+
   // Send contact information
 if($mail = mail($to, $subject, $message, $header)) {
     echo "sent to lagrandeflaque@gmail.com";
 }
 else echo "error";
-
-$fp = fopen('subscription/request-mail-' . date("Y-m-d_H:i:s") . '.txt', 'a+');
-fwrite($fp, $message);
-fclose($fp);
 
 ?>

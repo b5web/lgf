@@ -1,4 +1,4 @@
-# Project LGF TEST
+# Project LGF
 
 ## Build & development
 Run `grunt` for building and `grunt serve` for preview.
