@@ -5,3 +5,4 @@ npm-debug.log
 app/dist/
 app/src/js/tmp/
 app/src/less/tmp/
+dploy.yaml
