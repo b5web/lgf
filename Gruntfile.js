@@ -27,17 +27,17 @@ module.exports = function(grunt) {
                       'bower_components/jquery.easing/dist/jquery.easing.js', 
                       'bower_components/jquery-lwtcountdown/dist/jquery.lwtCountdown-1.0.min.js',  
                       'bower_components/parallax/jquery.parallax.js',
-                      'app/src/conf/conf.js',
-                      'app/src/js/function.js'
+                      'src/conf/conf.js',
+                      'src/js/function.js'
                       ],
-                dest: 'app/src/js/tmp/built.js'
+                dest: 'src/js/tmp/built.js'
         } 
     }, 
 
     uglify: {
         js : {
             files: {
-              'app/dist/js/javascripts.min.js': ['app/src/js/tmp/built.js'] ,
+              'app/dist/js/javascripts.min.js': ['src/js/tmp/built.js'] ,
               'app/dist/js/html5shiv.js': ['bower_components/html5shiv/dist/html5shiv.js']  
             }
         } 
@@ -50,7 +50,7 @@ module.exports = function(grunt) {
           src: [
                 "bower_components/bootstrap/dist/css/bootstrap.css" ,
                 "bower_components/font-awesome/css/font-awesome.css" ,
-                "app/src/less/tmp/style.css"
+                "src/less/tmp/style.css"
                ],
           dest: 'app/dist/css/stylesheets.min.css',
         }]
@@ -61,7 +61,7 @@ module.exports = function(grunt) {
         dynamic: {                         // Another target
           files: [{
             expand: true,                  // Enable dynamic expansion
-            cwd: 'app/src/images/',                   // Src matches are relative to this path
+            cwd: 'src/images/',                   // Src matches are relative to this path
             src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
             dest: 'app/dist/images/'                  // Destination path prefix
           }]
@@ -70,8 +70,8 @@ module.exports = function(grunt) {
 
    less : {
        dist : {
-           src : ['app/src/less/*.less'] ,
-           dest : 'app/src/less/tmp/style.css'
+           src : ['src/less/*.less'] ,
+           dest : 'src/less/tmp/style.css'
        }
    } ,
       
